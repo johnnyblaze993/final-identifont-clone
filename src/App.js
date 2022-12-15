@@ -12,6 +12,7 @@ import { Item } from "./sections/index";
 import TopSection from "./sections/topsection/TopSection";
 import MiddleSection from "./sections/middleSection/MiddleSection";
 import BottomLeft from "./sections/bottomLeft/BottomLeft";
+import BottomRight from "./sections/bottomRight/BottomRight";
 
 // 👩🏻‍🎤 Emotion Styled Components
 const StyledGridContainer = styled(Grid)(({ theme }) => ({
@@ -53,9 +54,7 @@ export default function BasicGrid() {
         <MiddleSection />
 
         <BottomLeft />
-        <Grid item xs={12} sm={6}>
-          <Item>7</Item>
-        </Grid>
+        <BottomRight />
       </StyledGridContainer>
     </StyledMainContainer>
   );
