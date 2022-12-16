@@ -7,49 +7,63 @@ import Grid from "@mui/material/Grid";
 
 //Shared index.js
 import { Item } from "../index";
-import { Container } from "@mui/material";
+import { Container, Typography } from "@mui/material";
+
+//index.js
+import { designTextMq, rightText } from "./index";
+
+// 👩🏻‍🎤 Emotion Styled Components
+const StyledContainer = styled(Container)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  height: "100%",
+  width: "100%",
+}));
+
+const StyledLeftBox = styled(Box)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "flex-start",
+  gap: "2rem",
+  height: "100%",
+  width: "60%",
+}));
+
+const StyledRightBox = styled(Box)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-evenly",
+  alignItems: "flex-end",
+  width: "40%",
+  height: "100%",
+}));
+
+const StyledDesignText = styled(Typography)(({ theme }) => ({
+  fontWeight: "bold",
+  fontFamily: "Silkscreen, cursive",
+
+  ...designTextMq(theme),
+}));
 
 const BottomRight = () => {
   return (
     <Grid item xs={12} sm={6}>
       <Item>
-        <Container
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            height: "100%",
-            width: "100%",
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "flex-start",
-              height: "100%",
-              width: "70%",
-            }}
-          >
-            <h1>Bottom Right</h1>
-            <h1>Bang Boom</h1>
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-evenly",
-              alignItems: "flex-end",
-              width: "30%",
-              height: "100%",
-            }}
-          >
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-          </Box>
-        </Container>
+        <StyledContainer>
+          <StyledLeftBox>
+            <Typography variant="subtitle1">Recently Added</Typography>
+            <StyledDesignText variant="h1">DIGESTIVE</StyledDesignText>
+          </StyledLeftBox>
+          <StyledRightBox>
+            <Typography sx={rightText}>15 12 2022</Typography>
+            <Typography sx={rightText}>
+              DESIGNED BY <br /> JOHN ALVAREZ
+            </Typography>
+            <Typography sx={rightText}>QHDG TYPE</Typography>
+          </StyledRightBox>
+        </StyledContainer>
       </Item>
     </Grid>
   );
