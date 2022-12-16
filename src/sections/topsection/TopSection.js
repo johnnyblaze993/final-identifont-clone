@@ -29,7 +29,7 @@ const StyledTypography = styled(Typography)(({ theme }) => ({
   justifyContent: "center",
   alignItems: "center",
   width: "100%",
-  letterSpacing: ".5rem",
+  letterSpacing: ".3rem",
 
   //media query imported from index.js
   ...textMq(theme),
