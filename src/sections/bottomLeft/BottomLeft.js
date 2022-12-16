@@ -29,7 +29,7 @@ const StyledInnerMiddleBox = styled(Box)(({ theme }) => ({
   justifyContent: "space-between",
   width: "50%",
   textAlign: "left",
-  //imported media query
+  //imported media query from index.js
   ...flextMq(theme),
 }));
 

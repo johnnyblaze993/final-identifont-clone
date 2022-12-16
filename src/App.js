@@ -15,6 +15,18 @@ import BottomLeft from "./sections/bottomLeft/BottomLeft";
 import BottomRight from "./sections/bottomRight/BottomRight";
 
 // 👩🏻‍🎤 Emotion Styled Components
+const StyledMainContainer = styled(Box)(({ theme }) => ({
+  width: "100vw",
+  display: "flex",
+  justifyContent: "center",
+  backgroundColor: "black",
+  alignItems: "center",
+  boxSizing: "border-box",
+
+  //imported media query from index.js
+  ...containerMQ(theme),
+}));
+
 const StyledGridContainer = styled(Grid)(({ theme }) => ({
   width: "80%",
   height: "auto",
@@ -25,19 +37,6 @@ const StyledGridContainer = styled(Grid)(({ theme }) => ({
   [theme.breakpoints.down("md")]: {
     width: "100%",
   },
-}));
-
-// new change
-
-const StyledMainContainer = styled(Box)(({ theme }) => ({
-  width: "100vw",
-  display: "flex",
-  justifyContent: "center",
-  backgroundColor: "black",
-  alignItems: "center",
-  boxSizing: "border-box",
-
-  ...containerMQ(theme),
 }));
 
 export default function BasicGrid() {

@@ -31,6 +31,14 @@ const StyledLeftBox = styled(Box)(({ theme }) => ({
   width: "60%",
 }));
 
+const StyledDesignText = styled(Typography)(({ theme }) => ({
+  fontWeight: "bold",
+  fontFamily: "Silkscreen, cursive",
+
+  //imported media query from index.js
+  ...designTextMq(theme),
+}));
+
 const StyledRightBox = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
@@ -38,13 +46,6 @@ const StyledRightBox = styled(Box)(({ theme }) => ({
   alignItems: "flex-end",
   width: "40%",
   height: "100%",
-}));
-
-const StyledDesignText = styled(Typography)(({ theme }) => ({
-  fontWeight: "bold",
-  fontFamily: "Silkscreen, cursive",
-
-  ...designTextMq(theme),
 }));
 
 const BottomRight = () => {
