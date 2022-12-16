@@ -11,6 +11,15 @@ import { store } from "./app/store";
 const container = document.getElementById("root");
 const root = createRoot(container);
 
+export const containerMQ = (theme) => ({
+  [theme.breakpoints.up("md")]: {
+    height: "100vh",
+  },
+  [theme.breakpoints.down("md")]: {
+    height: "auto",
+  },
+});
+
 root.render(
   <React.StrictMode>
     <Provider store={store}>

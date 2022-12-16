@@ -6,6 +6,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 
 //Shared index.js
+import { containerMQ } from "./index";
 
 //Sections
 import TopSection from "./sections/topsection/TopSection";
@@ -36,12 +37,7 @@ const StyledMainContainer = styled(Box)(({ theme }) => ({
   alignItems: "center",
   boxSizing: "border-box",
 
-  [theme.breakpoints.up("md")]: {
-    height: "100vh",
-  },
-  [theme.breakpoints.down("md")]: {
-    height: "auto",
-  },
+  ...containerMQ(theme),
 }));
 
 export default function BasicGrid() {
