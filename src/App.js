@@ -6,7 +6,6 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 
 //Shared index.js
-import { Item } from "./sections/index";
 
 //Sections
 import TopSection from "./sections/topsection/TopSection";
