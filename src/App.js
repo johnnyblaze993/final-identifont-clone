@@ -49,9 +49,7 @@ export default function BasicGrid() {
     <StyledMainContainer>
       <StyledGridContainer container spacing={1 / 4}>
         <TopSection />
-
         <MiddleSection />
-
         <BottomLeft />
         <BottomRight />
       </StyledGridContainer>
